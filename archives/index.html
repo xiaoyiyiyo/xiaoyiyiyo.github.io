@@ -2,8 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
+   
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+     
   
   <title>Archives | Hexo</title>
+  <meta name="keywords" content="我是关键词优化 undefined undefined" />
+    <meta name="description" content="我是描述优化" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
@@ -18,46 +23,68 @@
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
   
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <!--引用ICSCSS-->
+  <link href="http://cdn.besdlab.cn/icecss/icecss.min.css" rel="stylesheet" type="text/css">
+      <script src="http://cdn.besdlab.cn/jquery/2.1.1/jquery.2.1.1.min.js"></script>
+      <script src="http://cdn.besdlab.cn/icecss/icecss.js"></script>
+      <script src="http://cdn.besdlab.cn/icecss/plugin/ice_click.js"></script>
+      <script>
+      ice_click.init();
+      </script>
   <link rel="stylesheet" href="/css/style.css" type="text/css">
   
-
 </head>
 <body>
   <div id="container">
     <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+      <style>
+.widget{
+  background: none; 
+ -webkit-box-shadow: none; 
+box-shadow: none;
+-webkit-border-radius:0px; 
+border-radius: 0px; 
+}
+  .ice-main-nav{
+    background: url("/img/ice-icon-menu.svg") no-repeat center center;
+  }
+ .ice-menu-logo a:hover{
+    background: none;
+  }
+
+      @media only screen and (min-width: 768px) {
+     .ice-main-nav {
+         width: auto;
+         height: auto;
+         background: none;
+         cursor: auto;
+     }
+   }
+</style>
+<header class="ice-menu ice-menu-hover">
+<div class="ice-menu-logo" style="font-family:'Microsoft YaHei'">
+ 
+     <a href="http://besdlab.cn"><img src="/img/logo.png" style="height:100%"></a>
+     <style>
+       .ice-menu-logo{
+    background: none;
+  }</style>
+     
+
+</div>
+
+<nav class="ice-main-nav">
+<ul>
+
+          <li><a href="/">Home</a></li>
         
-          <a class="main-nav-link" href="/">Home</a>
+          <li><a href="/archives">Archives</a></li>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
+</ul>
+</nav>
+</header> 
       <div class="outer">
         <section id="main">
   
@@ -95,6 +122,9 @@
 </section>
         
           <aside id="sidebar">
+
+  
+    
   
     
   
@@ -126,30 +156,35 @@
   </div>
 
   
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">LINKS</h3>
+    <div class="widget">
+    <ul>
+     
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/archives">Archives</a></li>
+        
+        </ul>
+    </div>
+  </div>
+
+  
+
 </aside>
+
+
         
       </div>
-      <footer id="footer">
+      <footer style="color:#fff;">
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2015 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+  <div class="ice-div ice-div-1-1" style="height:60px;background: #2c3d4f;line-height:60px;padding-left:20px">
+  	Powered by <a href="http://hexo.io/">Hexo</a> Theme by <a href="http://www.besdlab.cn">BESD</a>
   </div>
 </footer>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
   <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
