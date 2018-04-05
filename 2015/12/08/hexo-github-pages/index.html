@@ -1,0 +1,899 @@
+<!doctype html>
+<html class="theme-next   use-motion ">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="hexo,github pages," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
+
+
+
+
+
+
+<meta name="description" content="快速搭建属于你自己的定制博客&amp;emsp;&amp;emsp;如果你想拥有自己的博客，想自己掌控博客样式，且有那么点耐心想搭建的，那么可以看看这个博客。而不弄博客的，那就凑个热闹吧，鼓鼓掌，拍拍砖就行了，嘿嘿。&amp;nbsp;搭建基于github pages的博客教程网上有很多，但是每个教程都或多或少不如人意，出现各种问题，遂将我的搭建过程详细写于该博客，作为我博客的开门之作！ ^_^  &amp;emsp;如有问题,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo-github pages">
+<meta property="og:url" content="http://yoursite.com/2015/12/08/hexo-github-pages/index.html">
+<meta property="og:site_name" content="XiaoyiyiYo">
+<meta property="og:description" content="快速搭建属于你自己的定制博客&amp;emsp;&amp;emsp;如果你想拥有自己的博客，想自己掌控博客样式，且有那么点耐心想搭建的，那么可以看看这个博客。而不弄博客的，那就凑个热闹吧，鼓鼓掌，拍拍砖就行了，嘿嘿。&amp;nbsp;搭建基于github pages的博客教程网上有很多，但是每个教程都或多或少不如人意，出现各种问题，遂将我的搭建过程详细写于该博客，作为我博客的开门之作！ ^_^  &amp;emsp;如有问题,">
+<meta property="og:image" content="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages1.png">
+<meta property="og:image" content="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages2.png">
+<meta property="og:image" content="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages3.png">
+<meta property="og:image" content="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages4.png">
+<meta property="og:updated_time" content="2018-04-05T10:20:29.368Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo-github pages">
+<meta name="twitter:description" content="快速搭建属于你自己的定制博客&amp;emsp;&amp;emsp;如果你想拥有自己的博客，想自己掌控博客样式，且有那么点耐心想搭建的，那么可以看看这个博客。而不弄博客的，那就凑个热闹吧，鼓鼓掌，拍拍砖就行了，嘿嘿。&amp;nbsp;搭建基于github pages的博客教程网上有很多，但是每个教程都或多或少不如人意，出现各种问题，遂将我的搭建过程详细写于该博客，作为我博客的开门之作！ ^_^  &amp;emsp;如有问题,">
+<meta name="twitter:image" content="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages1.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '',
+    sidebar: 'post',
+    motion: true
+  };
+</script>
+
+  <title> hexo-github pages | XiaoyiyiYo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?5534991999007ef0dd15ea48e97d1dc6";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">XiaoyiyiYo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu ">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content">
+          
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                hexo-github pages
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            发表于
+            <time itemprop="dateCreated" datetime="2015-12-08T02:53:03+08:00" content="2015-12-08">
+              2015-12-08
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/08/hexo-github-pages/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/08/hexo-github-pages/" itemprop="commentsCount">
+                    &nbsp; | &nbsp; 评论
+                  </span>
+                </a>
+              </span>
+            
+          
+
+          
+          <!--next: create by xiaoyiyiyo -->
+          
+         <span id="/2015/12/08/hexo-github-pages/" class="leancloud_visitors"  data-flag-title="hexo-github pages">
+            &nbsp; | &nbsp; 阅读
+            </span>
+      
+        </div>
+      </header>
+    
+
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><blockquote class="blockquote-center"><strong>快速搭建属于你自己的定制博客</strong></blockquote><br>&emsp;&emsp;如果你想拥有自己的博客，想自己掌控博客样式，且有那么点耐心想搭建的，那么可以看看这个博客。而不弄博客的，那就凑个热闹吧，鼓鼓掌，拍拍砖就行了，嘿嘿。&nbsp;搭建基于<strong>github pages</strong>的博客教程网上有很多，但是每个教程都或多或少不如人意，出现各种问题，遂将我的搭建过程详细写于该博客，作为我博客的开门之作！ ^_^  &emsp;如有问题,可以留下评论。<br><a id="more"></a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><p><br></p>
+<h3 id="创建github账号以及项目"><a href="#创建github账号以及项目" class="headerlink" title="创建github账号以及项目"></a><font color="#FF6600">创建github账号以及项目</font></h3><pre><code>地址 ： https://github.com/
+</code></pre><p>注册登录进去后，点击 <strong><font color="#0099ff">+ New repository</font></strong> &nbsp; 之后在<strong><font color="#0099ff">Repository name</font></strong>的输入框中输入： <strong>yourname.github.io</strong>&nbsp;(yourname替换成你自己想取的名字)，其他选项等默认即可，点击<strong><font color="#0099ff">create repository</font></strong>即完成。先不要关掉github，因为还要用到，嘿嘿。<br><br><br></p>
+<h3 id="本地安装git，nodejs"><a href="#本地安装git，nodejs" class="headerlink" title="本地安装git，nodejs"></a><font color="#FF6600">本地安装git，nodejs</font></h3><font size="5"><strong>注意:</strong></font>  git，nodejs版本的不同可能会造成各种问题。在此给出我的版本。<br><br>    git:    <a href="https://git-for-windows.github.io/" target="_blank" rel="external">https://git-for-windows.github.io/</a>    ( 注意是windows的，我原先是在 <a href="http://git-scm.com/download/这个下载的，结果就坑人了" target="_blank" rel="external">http://git-scm.com/download/这个下载的，结果就坑人了</a>)<br>    nodejs: <a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a>  ( 注意下载 LTS 版本的 )<br><br>安装都选默认即可。安装完后，记得进入nodejs的目录，双击运行&nbsp;<strong>nodevars.bat</strong>&nbsp;文件,即完成环境路径配置。当然也可以手动配置。<br><br><br><br><font color="#FF6600" size="4"><strong>生成SSH,建立与github的联系</strong></font>
+
+<p>关于SSH的作用有兴趣的可以自行百度，我目前就当它是验证连接，一个公钥(放在github，相当于门)，一个私钥(放在本地,相当于门的钥匙)。</p>
+<p>在任意地方右键，会有 &nbsp;<strong>Git Bash Here</strong>&nbsp;一栏，点击进入后，先初始化git，输入命令：</p>
+<pre><code>$ git config --global user.name &quot;John Doe&quot;    //你的名字，此处为了方便，你可以和github中的名字一样，比如xiaoyiyiyo
+$ git config --global user.email johndoe@example.com   //你的邮箱，同样为了方便，和github注册的邮箱一样吧。
+</code></pre><p>下面进行SSH的配置，输入命令：</p>
+<pre><code>$ ssh-keygen -t rsa -C &quot;xiaoyiyiyo@outlook.com&quot;
+</code></pre><p><img src="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages1.png" alt=""></p>
+<p>此处直接enter，然后会提示&nbsp;<strong>Enter passphrase 〈empty for no passphrase〉:</strong>&nbsp;即输入你的&nbsp;<strong>密码</strong>，这个密码你得记住哦。之后最终会显示出一段你看不懂的类似乱码的东西，即表示成功。</p>
+<p>然后输入命令：</p>
+<pre><code>$ cat ~/.ssh/id_rsa.pub
+</code></pre><p>这个命令是得到公钥内容，复制屏幕上显示出来的内容。然后打开浏览器进入你的github，</p>
+<p><img src="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages2.png" alt=""></p>
+<p>点击图中的&nbsp;<strong><font color="#0099ff">Settings</font></strong> &nbsp;可以在左边栏中看到&nbsp;<strong><font color="#0099ff">SSH keys</font></strong> &nbsp;点击之后，&nbsp;<strong><font color="#0099ff">Add SSH key</font></strong> &nbsp;将复制的内容添加进去。</p>
+<p>最后测试是否能够连通，输入命令：</p>
+<pre><code>$ ssh -T git@github.com
+</code></pre><p>可能会出现要你输入yes/no，果断yes。再之后可能要出现类似</p>
+<pre><code>Enter passphrase for key &apos;/c/Users/kingyi/.ssh/id_rsa&apos;
+</code></pre><p>即输入你先前的密码，最终出现</p>
+<pre><code>Hi xiaoyiyiyo! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p><br><br></p>
+<h3 id="安装配置-HEXO-最后一步了"><a href="#安装配置-HEXO-最后一步了" class="headerlink" title="安装配置 HEXO ,最后一步了!"></a><font color="#FF6600">安装配置 HEXO ,最后一步了!</font></h3><p>首先找一个你想要将hexo安装到的目录，然后在进入目录，右键，&nbsp;<strong>Git Bash Here</strong>&nbsp;，然后输入命令：</p>
+<pre><code>$ npm install -g hexo
+</code></pre><p>输入完后可能会有一段时间没动静，不要急，等！（哥当时等了好久结果报了个错，没有安装成功，后来找问题，找的我直接换了个nodejs版本，就OK了，醉的我。。。）</p>
+<p>然后部署hexo（可以先观察目录结构，了解前后发生的事情），输入命令：</p>
+<pre><code>$ hexo init
+</code></pre><p>之后会出现提示：</p>
+<pre><code>info You are almost done! Don&apos;t forget to run &apos;npm install&apos; before    ...
+</code></pre><p>呃。。果断输入:</p>
+<pre><code>$ npm install  //这个命令应该是在安装hexo需要的依赖模块，见node_modules文件夹
+</code></pre><p>hexo会产生一些博客必要的来源文件，而为了产生真正构建博客的文件，输入命令：</p>
+<pre><code>$ hexo g  //即hexo generate
+</code></pre><p>记住这个命令，弄博客必备命令。</p>
+<p><font size="5"><strong>至此，</strong></font>hexo会自动在目录中生成网站博客需要的文件，比如&nbsp;<strong>public</strong>&nbsp;文件夹，它是主要根据&nbsp;<strong>source/_posts/hello.md</strong>&nbsp;产生的。</p>
+<p>精彩来了，如果你等不及了，想看下你的博客效果，输入命令：</p>
+<pre><code>$ hexo s   //即 hexo server
+</code></pre><p>然后在网站输入localhost:4000，按下Enter,出现标准的界面。（呃。。图片没有截完整，看你自己的就行）</p>
+<p><img src="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages3.png" alt=""></p>
+<p>嗯嗯，这个是本地的，还需再加油一把，快要成功了！</p>
+<p>接下来配置hexo ，在目录中找到<strong>_config.yml</strong>（根目录哦，因为themes文件夹中也有个），用编辑器打开，转到最后，会看见：</p>
+<pre><code># Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+type:
+</code></pre><p>修改如下：</p>
+<pre><code># Deployment
+## Docs: http://hexo.io/docs/deployment.html
+deploy:
+type: git
+repository: git@github.com:xiaoyiyiyo/xiaoyiyiyo.github.io.git
+branch: master
+</code></pre><p>其中&nbsp;repository:&nbsp;后面的值为github你相应项目中的值，如下 &nbsp;<strong><font color="#0099ff">SSH</font></strong> &nbsp;：</p>
+<p><img src="http://7xozfv.com1.z0.glb.clouddn.com/hexo-githubpages4.png" alt=""></p>
+<p>当然你也可以输入&nbsp;<strong><font color="#0099ff">HTTPS</font></strong> &nbsp;中的值。至于哪种方式好，呃，，我选的是SSH，因为我也不清楚，毕竟前面已经配置了。</p>
+<p><font size="5"><strong>注意:</strong></font> 配置的时候要有一个空格，比如 &nbsp;<strong>type: git</strong> &nbsp;冒号后面有个空格。这个东东坑我了好半天。！！</p>
+<p>坚持，，最后两三步，两三个命令了。。。</p>
+<p>配置好_config.yml的必要部分后，你可以继续配置一些信息，看文件里的注释就应该知道了。下面就是将目录下的博客文件部署到github里的时候了，先输入一个命令，不然又得坑人（当时我啊。。心酸啊）：</p>
+<pre><code>$ npm install hexo-deployer-git --save   //解决下面命令中 hexo d 的报错
+</code></pre><p>百度上说是因为在Hexo 3.0版本后deploy git 被分开的。。。。</p>
+<p>然后输入命令：</p>
+<pre><code>$ hexo clean   //即用于清除缓存，删除原来生成的文件，如public文件夹里的东西。[可选命令]
+$ hexo g   //这个命令上面已介绍
+$ hexo d   //即 hexo deploy，部署命令，将文件部署到网络github上
+</code></pre><p>注意：这三个命令就是我们本地操作博客常用到系列操作，得记住啊。</p>
+<p>输入完命令，可能会弹出一个框框要你输入一个东东，那个东东应该是要你输入密码，输入你的密码即可。</p>
+<p><strong>hexo d</strong> 这条命令输入完后，有一种报错，其中部分字段如下：</p>
+<pre><code>Permission denied (publickey). fatal: Could not read from remote repository.
+...
+Please make sure you have the correct access rights and the repository exists.
+</code></pre><p>当时为了解决这个问题，煞费苦心啊，以为是SSH配错了，测试 <strong>ssh -T git@github.com</strong> 结果一切正常，唉，，，最后百度偶然见到一个同样悲催的同学的问答，原来是 git 版本造成的，，所以咯，文章前面就说了注意版本问题。<br><br><br></p>
+<h3 id="至此！！！终于到了"><a href="#至此！！！终于到了" class="headerlink" title="至此！！！终于到了"></a><font color="#FF6600">至此！！！终于到了</font></h3><p><br><br>浏览器输入 <strong>xiaoyiyiyo.github.io</strong> 即可看到你的博客了。<strong>xiaoyiyiyo.github.io</strong>替换成你的github项目名字，对，就是你创建github项目时的名字。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><br></h2><h3 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a><font color="#FF6600">未完待续</font></h3><p><br><br>比如，我的博客网址是 www.xiaoyiyiyo.com，而不是 xiaoyiyiyo.github.io，因为我绑定了一下，可是绑定过程，以及绑定后出现的问题又是一把辛酸泪啊。还有主题的配置，博客的书写等等（用到markdown，可先自行百度学习）<br>休息一会…<br><br><br><br></p>
+<hr>
+<blockquote>
+<p>最近访客</p>
+</blockquote>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+      <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div><br>
+      
+      <!--
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+            <a href="/tags/github-pages/" rel="tag">#github pages</a>
+          
+        </div>
+      -->
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/03/JavaToWeb/" rel="prev" title="JavaToWeb">
+                JavaToWeb <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+        </div>
+
+        
+
+
+        
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/08/hexo-github-pages/"
+           data-title="hexo-github pages" data-url="http://yoursite.com/2015/12/08/hexo-github-pages/">
+      </div>
+    
+  </div>
+
+
+      </div>
+
+      
+        
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/kingyi.jpg" alt="XiaoyiyiYo" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">XiaoyiyiYo</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">欲戴王冠，必承其重</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/your-user-name" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> github
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/your-user-name" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/your-user-name" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://douban.com/people/your-user-name" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> douban
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/your-user-name" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> zhihu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建github账号以及项目"><span class="nav-number">1.1.</span> <span class="nav-text">创建github账号以及项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地安装git，nodejs"><span class="nav-number">1.2.</span> <span class="nav-text">本地安装git，nodejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装配置-HEXO-最后一步了"><span class="nav-number">1.3.</span> <span class="nav-text">安装配置 HEXO ,最后一步了!</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#至此！！！终于到了"><span class="nav-number">1.4.</span> <span class="nav-text">至此！！！终于到了</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#未完待续"><span class="nav-number">2.1.</span> <span class="nav-text">未完待续</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+      
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="icon-next-heart fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XiaoyiyiYo</span>
+</div>
+
+<div class="powered-by">
+  轮回几多少一人
+</div>
+<!--
+<div class="theme-info">
+  kingyi -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT
+  </a>
+</div>-->
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+
+  
+    
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"kingyi"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
+
+
+    
+  
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  <script type="text/javascript" src="/js/bootstrap.js"></script>
+
+  
+  
+
+  
+  
+  
+     <!--next: custom analytics part create by xiaoyiyiyo -->
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+<script>AV.initialize("J4HKJJ9QeIBGhRH2jgKbNCOC-gzGzoHsz", "KdmUvKjXGu05jqrJhyxHWKfA");</script>
+<script>
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+	$(".leancloud_visitors").each(function() {
+		var url = $(this).attr("id").trim();
+		query.equalTo("url", url);
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {
+					var content = $(document.getElementById(url)).text() + ': 0';
+					$(document.getElementById(url)).text(content);
+					return;
+				}
+				for (var i = 0; i < results.length; i++) {
+					var object = results[i];
+					var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
+					$(document.getElementById(url)).text(content);
+				}
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+
+	});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else if ($('.post-title-link').length > 1) {
+		showTime(Counter);
+	}
+}); 
+</script>
+  
+</body>
+</html>
